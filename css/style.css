@@ -105,4 +105,16 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+.game__container .field {
+  background: pink;
+}
+
+.game__container .pitcher {
+  background: lime;
+}
+
+.game__container .batter {
+  background: yellowgreen;
+}
 /*# sourceMappingURL=style.css.map */
