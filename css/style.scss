@@ -81,6 +81,31 @@
 
     .pitcher {
         background: lime;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+
+        .pitcher--info {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 2fr 8fr;
+
+            .handed {
+                display: flex;
+                align-items: center;
+                padding: 5px;
+            }
+        }
+
+        .pitcher--gamestats {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: repeat(6, 1fr);
+
+            & > div {
+                text-align: center;
+            }
+        }
     }
 
     .batter {
