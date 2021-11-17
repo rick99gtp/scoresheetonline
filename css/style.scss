@@ -23,8 +23,8 @@
 
             .scoreboard__info-row {
                 display: flex;
-                flex: 1 ;
-                padding: 3px;
+                flex: 1;
+                padding: 1px;
 
                 .teamname {
                     flex: 6;
@@ -40,7 +40,7 @@
                     justify-content: center;
                     align-items: center;
                     background: lightsteelblue;
-                    margin: 0 5px;
+                    margin: 0 2px;
                 }
 
                 .scoreboard__info-outs {
@@ -74,9 +74,43 @@
         }
     }
 
-    .field {
+    .field__container {
         background: pink;
         flex: 6;
+        padding: 10px;
+
+        .field__container--grid {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            & > div {
+                flex: 1;
+                background: gray;
+            }
+
+            .centered-row {
+                display: flex;
+                justify-content: center;
+
+                & > div {
+                    width: 100px;
+                    height: 100%;
+                    background: red;
+                }
+            }
+
+            .middle-row {
+                display: flex;
+                justify-content: space-between;
+
+                & > div {
+                    width: 100px;
+                    height: 100%;
+                    background: red;
+                }
+            }
+        }
     }
 
     .pitcher {
@@ -124,6 +158,7 @@
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             text-align: center;
+            padding-top: 5px;
 
             .batter-diamond-bg {
                 position: relative;
@@ -154,7 +189,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 14px;
+            font-size: 16px;
         }
 
         & div:last-child {
