@@ -195,6 +195,17 @@
   background: red;
 }
 
+.game__container .field__container .field__container--grid .middle-row #pitchers-mound {
+  background: #ff4e4e;
+}
+
+.game__container .field__container .field__container--grid .middle-row #pitchers-mound .test {
+  background: green;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+}
+
 .game__container .pitcher {
   background: lime;
   -webkit-box-flex: 1;
