@@ -16,7 +16,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: red;
 }
 
 .game__container .scoreboard {
@@ -149,24 +148,12 @@
 
 .game__container .pitcher {
   background: lime;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
 .game__container .pitcher .pitcher--info {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  -ms-grid-columns: 2fr 8fr;
-      grid-template-columns: 2fr 8fr;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,22 +169,26 @@
 .game__container .pitcher .pitcher--gamestats {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
 }
 
 .game__container .pitcher .pitcher--gamestats > div {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: gray;
+  padding: 3px;
+  border: 1px solid #000;
 }
 
 .game__container .batter {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -210,7 +201,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: green;
+  background: lime;
 }
 
 .game__container .batter .batter--info .handed {
@@ -225,23 +216,38 @@
   text-align: center;
 }
 
+.game__container .batter .batter--gamestats .batter-diamond-bg {
+  position: relative;
+}
+
 .game__container .batter .batter--gamestats .batter-diamond-bg img {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
+}
+
+.game__container .batter .batter--gamestats .batter-diamond-bg p {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 12px;
 }
 
 .game__container .options {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
 .game__container .options > div {
-  background: gray;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -251,5 +257,21 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 14px;
+}
+
+.game__container .options div:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.game__container .options .options--button {
+  background: #d8d8d8;
+  margin: 2px;
+}
+
+.game__container .options .options--menu {
+  font-size: 34px;
 }
 /*# sourceMappingURL=style.css.map */

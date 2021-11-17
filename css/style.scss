@@ -10,7 +10,6 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background: red;
 
     .scoreboard {
         display: flex;
@@ -82,15 +81,9 @@
 
     .pitcher {
         background: lime;
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr;
         flex: 1;
 
         .pitcher--info {
-            display: grid;
-            grid-template-rows: 1fr;
-            grid-template-columns: 2fr 8fr;
             display: flex;
             align-items: center;
 
@@ -101,25 +94,26 @@
 
         .pitcher--gamestats {
             display: grid;
-            grid-template-rows: 1fr 1fr;
             grid-template-columns: repeat(6, 1fr);
 
             & > div {
-                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 background: gray;
+                padding: 3px;
+                border: 1px solid #000;
             }
         }
     }
 
     .batter {
-        display: grid;
-        grid-template-columns: 1fr;
         flex: 1;
 
         .batter--info {
             display: flex;
             align-items: center;
-            background: green;
+            background: lime;
 
             .handed {
                 padding: 5px;
@@ -132,24 +126,48 @@
             text-align: center;
 
             .batter-diamond-bg {
+                position: relative;
+
                 img {
-                    width: 48px;
-                    height: 48px;
+                    width: 40px;
+                    height: 40px;
+                }
+
+                p {
+                    display: inline-block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 12px;
                 }
             }
         }
     }
 
     .options {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        display: flex;
         flex: 1;
 
         & > div {
-            background: gray;
+            flex: 2;
             display: flex;
             justify-content: center;
             align-items: center;
+            font-size: 14px;
+        }
+
+        & div:last-child {
+            flex: 1;
+        }
+
+        .options--button {
+            background: rgb(216, 216, 216);
+            margin: 2px;
+        }
+
+        .options--menu {
+            font-size: 34px;
         }
     }
 }
